@@ -1,125 +1,439 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Md Mazid Hossain | DevOps Portfolio | </title>
-  <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Md Mazid Hossain | DevOps Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: #0f172a;
+      color: #e2e8f0;
+      line-height: 1.7;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      background: rgba(15, 23, 42, 0.95);
+      backdrop-filter: blur(10px);
+      z-index: 1000;
+      border-bottom: 1px solid rgba(148, 163, 184, 0.1);
+    }
+
+    .navbar {
+      max-width: 1200px;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 18px 20px;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: 700;
+      color: #38bdf8;
+    }
+
+    .navbar ul {
+      display: flex;
+      list-style: none;
+      gap: 22px;
+    }
+
+    .navbar a {
+      text-decoration: none;
+      color: #cbd5e1;
+      font-size: 15px;
+      transition: 0.3s;
+    }
+
+    .navbar a:hover {
+      color: #38bdf8;
+    }
+
+    .hero {
+      max-width: 1200px;
+      margin: auto;
+      min-height: 100vh;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      align-items: center;
+      gap: 50px;
+      padding: 60px 20px;
+    }
+
+    .hero-text h3 {
+      color: #38bdf8;
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+
+    .hero-text h1 {
+      font-size: 52px;
+      line-height: 1.2;
+      margin-bottom: 18px;
+    }
+
+    .hero-text p {
+      color: #cbd5e1;
+      margin-bottom: 25px;
+      max-width: 650px;
+    }
+
+    .btn-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    .btn {
+      padding: 14px 28px;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+
+    .btn-primary {
+      background: #38bdf8;
+      color: #0f172a;
+    }
+
+    .btn-primary:hover {
+      background: #0ea5e9;
+      transform: translateY(-3px);
+    }
+
+    .btn-outline {
+      border: 1px solid #38bdf8;
+      color: #38bdf8;
+    }
+
+    .btn-outline:hover {
+      background: #38bdf8;
+      color: #0f172a;
+    }
+
+    .hero-card {
+      background: linear-gradient(145deg, #1e293b, #0f172a);
+      border: 1px solid rgba(56, 189, 248, 0.15);
+      border-radius: 24px;
+      padding: 35px;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+    }
+
+    .hero-card h2 {
+      color: #38bdf8;
+      margin-bottom: 18px;
+    }
+
+    .hero-card ul {
+      list-style: none;
+    }
+
+    .hero-card li {
+      margin-bottom: 14px;
+      color: #cbd5e1;
+    }
+
+    section {
+      max-width: 1200px;
+      margin: auto;
+      padding: 90px 20px;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 38px;
+      margin-bottom: 15px;
+      color: #38bdf8;
+    }
+
+    .section-subtitle {
+      text-align: center;
+      color: #94a3b8;
+      max-width: 700px;
+      margin: 0 auto 50px;
+    }
+
+    .skills-grid,
+    .projects-grid,
+    .experience-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 25px;
+    }
+
+    .card {
+      background: #1e293b;
+      padding: 28px;
+      border-radius: 20px;
+      border: 1px solid rgba(148, 163, 184, 0.1);
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      border-color: rgba(56, 189, 248, 0.4);
+    }
+
+    .card h3 {
+      color: #38bdf8;
+      margin-bottom: 15px;
+      font-size: 22px;
+    }
+
+    .card ul {
+      padding-left: 18px;
+      color: #cbd5e1;
+    }
+
+    .project-links {
+      margin-top: 18px;
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .project-links a {
+      text-decoration: none;
+      color: #38bdf8;
+      border: 1px solid #38bdf8;
+      padding: 8px 14px;
+      border-radius: 8px;
+      font-size: 14px;
+      transition: 0.3s;
+    }
+
+    .project-links a:hover {
+      background: #38bdf8;
+      color: #0f172a;
+    }
+
+    .contact {
+      text-align: center;
+      background: #1e293b;
+      border-radius: 24px;
+      padding: 50px 20px;
+    }
+
+    .contact p {
+      color: #cbd5e1;
+      margin: 12px 0;
+    }
+
+    .contact a {
+      color: #38bdf8;
+      text-decoration: none;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px 20px;
+      color: #94a3b8;
+      border-top: 1px solid rgba(148, 163, 184, 0.1);
+    }
+
+    @media (max-width: 768px) {
+      .navbar {
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      .navbar ul {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .hero-text h1 {
+        font-size: 38px;
+      }
+    }
+  </style>
 </head>
 <body>
-  <header class="hero">
-    <h1>Md Mazid Hossain</h1>
-    <p>DevOps Enthusiast | IT & Network Support Specialist </p>
-    <div class="links">
-      <a href="https://github.com/mazid-dev" target="_blank">GitHub</a>
-      <a href="https://www.linkedin.com/in/md-mazid-hossain-293561227/" target="_blank">LinkedIn</a>
-    </div>
+
+  <header>
+    <nav class="navbar">
+      <div class="logo">Mazid.dev</div>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
   </header>
 
-  <section class="section about">
-    <h2>About Me</h2>
-    <p>Highly motivated DevOps Engineer with hands-on experience in building CI/CD pipelines and automating
-infrastructure using Docker, AWS, and GitHub Actions. My 3+ years of background in IT support and networking
-provides a strong foundation in Linux system administration, MikroTik, and Cisco. Eager to contribute to a
-collaborative team and solve real-world problems.
-</p>
-  </section>
+  <section class="hero" id="about">
+    <div class="hero-text">
+      <h3>Hello, I'm</h3>
+      <h1>Md Mazid Hossain</h1>
+      <h3>Aspiring DevOps Engineer & IT Executive</h3>
+      <p>
+        I am an aspiring DevOps Engineer with hands-on experience in AWS, Docker,
+        Kubernetes, Terraform, and CI/CD. I currently work as an IT Executive with
+        4+ years of experience in networking, infrastructure support, MikroTik,
+        and system administration.
+      </p>
 
-  <section class="section skills">
-    <h2>Skills</h2>
-    <div class="grid">
-      <div class="card">DevOps & CI/CD: Git, GitHub, Jenkins, GitHub Actions</div>
-      <div class="card">Containerization & Orchestration: Docker, Docker Compose, Kubernetes</div>
-      <div class="card">Infrastructure as Code (IaC): Terraform, Ansible</div>
-      <div class="card">AWS (EC2, S3, IAM, RDS – beginner to intermediate)</div>
-      <div class="card">Networking: MikroTik (VLAN, PPPoE, VPN, Firewall), Cisco (Routing, Switching) </div>
-      <div class="card">Scripting: Python, Bash</div>
+      <div class="btn-group">
+        <a href="https://github.com/mazid-dev" class="btn btn-primary" target="_blank">View GitHub</a>
+        <a href="https://www.linkedin.com/in/md-mazid-hossain-293561227/" class="btn btn-outline" target="_blank">LinkedIn</a>
+      </div>
     </div>
-  </section>
 
-  <section class="section experience">
-    <h2>Experience</h2>
-    <div class="exp-card">
-      <h3>Executive – IT <span>Vcube Soft And Tech (Aug 2023 – Present)</span></h3>
+    <div class="hero-card">
+      <h2>Quick Info</h2>
       <ul>
-        <li>Designed and implemented secure LAN and office networks</li>
-        <li>Configured MikroTik routers: VLAN, Loadbalancing, PPPoE, NAT, VPN</li>
-        <li>Installed and managed Windows Server with ADDS, DNS, DHCP</li>
-        <li>Provided support for 50+ users, network, printers, scanners</li> 
-        <li>Installed and troubleshot computer hardware, network, software, laptop, printers, antivirus, CCTV camera </li>
+        <li><strong>Location:</strong> Dhaka, Bangladesh</li>
+        <li><strong>Email:</strong> mazid.info67@gmail.com</li>
+        <li><strong>Phone:</strong> 01739365972</li>
+        <li><strong>Current Role:</strong> Executive – IT at VCube Soft and Tech</li>
+        <li><strong>Goal:</strong> Join a DevOps team and build cloud-native solutions</li>
       </ul>
     </div>
-    <div class="exp-card">
-      <h3>Network Support Engineer <span>Tuhin Enterprise(ISP) (Oct 2022 – Jul 2023)</span></h3>
-      <ul>
-        <li>Configured OLT/ONU for GPON/FTTH clients</li>
-        <li>Assisted in MikroTik & Cisco router/switch configuration</li>
-        <li>Supported LAN setup, troubleshooting, and client network issues</li>
-        <li>Delivered onsite & remote IT support</li>
-    
-      </ul>
-    </div>
+  </section>
 
-    <div class="exp-card">
-        <h3>DevOps Hands-On Practice <span>2025 – Present</span></h3>
-        <p>Self-driven practical learning using real-world tools and platforms:</p>
+  <section id="skills">
+    <h2 class="section-title">Technical Skills</h2>
+    <p class="section-subtitle">Technologies and tools I use in networking, cloud, automation, and infrastructure.</p>
+
+    <div class="skills-grid">
+      <div class="card">
+        <h3>DevOps & Cloud</h3>
         <ul>
-          <li><strong>Version Control & CI/CD:</strong> Git, GitHub, GitHub Actions, Jenkins pipelines</li>
-          <li><strong>Containerization:</strong> Docker, Docker Compose, Docker volumes, building and running images</li>
-          <li><strong>Cloud & IAC:</strong> AWS (EC2, S3, IAM, RDS), Terraform, Ansible configuration</li>
-          <li><strong>Orchestration:</strong> Introduction to Kubernetes concepts and cluster management</li>
-          <li><strong>Scripting:</strong> Python and Bash scripting</li>
-          <li><strong>Systems:</strong> Ubuntu Server CLI usage, shell commands, permissions</li>
+          <li>Docker & Docker Compose</li>
+          <li>Kubernetes (kubeadm, Minikube, containerd)</li>
+          <li>AWS EC2, S3, IAM, RDS</li>
+          <li>Terraform (Infrastructure as Code)</li>
+          <li>GitHub Actions & Jenkins</li>
         </ul>
       </div>
-  </section>
 
-  <section class="section training">
-    <h2>Training & Certifications</h2>
-    <div class="exp-card">
-        <h3>DevOps & MLOps <span>Ongoing</span></h3>
-        <p><strong>Institute:</strong> BongDev , Dhaka<br>
-           <strong>Year:</strong> 2025 – Present<br>
-           Topics: Git & GitHub, Jenkins (CI/CD), Docker, AWS (EC2, S3, IAM), Terraform, Ansible, Kubernetes, Bash scripting, Linux server management
-        </p>
+      <div class="card">
+        <h3>Systems & Scripting</h3>
+        <ul>
+          <li>Linux Ubuntu CLI</li>
+          <li>Bash Scripting</li>
+          <li>Windows Server</li>
+          <li>ADDS, DNS, DHCP</li>
+          <li>Automation Tasks</li>
+        </ul>
       </div>
-    <div class="exp-card">
-      <h3>MikroTik Certified Network Associate (MTCNA)</h3>
-      <p><strong>Institute:</strong> New Trizons IT, Panthapath, Dhaka<br>
-         <strong>Year:</strong> 2022 (3 months)<br>
-         Topics: MikroTik Configuring, Routing, DHCP, Firewall, SSH, ARP, Wireless
-      </p>
-    </div>
-    <div class="exp-card">
-      <h3>Cisco Certified Network Associate (CCNA)</h3>
-      <p><strong>Institute:</strong> New Trizons IT, Dhaka<br>
-         <strong>Year:</strong> 2022 (4 months)<br>
-         Topics: Network Fundamentals, Routing Protocols, IP Connectivity, IP Services, Security, VLANs
-      </p>
+
+      <div class="card">
+        <h3>Networking</h3>
+        <ul>
+          <li>MikroTik: PPPoE, NAT, VLAN, VPN</li>
+          <li>Cisco Routing & Switching</li>
+          <li>TCP/IP & DNS</li>
+          <li>Firewall Fundamentals</li>
+          <li>LAN & Infrastructure Support</li>
+        </ul>
+      </div>
     </div>
   </section>
 
-  <section class="section projects">
-    <h2>Projects</h2>
-    <ul>
-      <li>Full-Stack CI/CD Pipeline on AWS EC2 (Node.js & Python)
-</li>
-      <li>Key Accomplishments:
+  <section id="experience">
+    <h2 class="section-title">Professional Experience</h2>
+    <p class="section-subtitle">My experience in IT support, networking, and infrastructure management.</p>
 
-<li>End-to-End CI/CD: Designed and implemented an automated pipeline via GitHub Actions for Build, Push (Docker Hub), and Deploy to AWS EC2 on every Git push.</li>
+    <div class="experience-grid">
+      <div class="card">
+        <h3>Executive – IT</h3>
+        <p><strong>VCube Soft and Tech</strong><br>Aug 2023 – Present</p>
+        <ul>
+          <li>Maintained secure office LAN and VLAN infrastructure</li>
+          <li>Configured MikroTik routers, NAT, VPN, and routing</li>
+          <li>Provided support for 50+ users</li>
+          <li>Managed Windows Server and user accounts</li>
+          <li>Troubleshot system and network performance issues</li>
+        </ul>
+      </div>
 
-<li>Optimization: Used Multi-stage Dockerfiles for both apps to minimize image size and enhance security.</li>
-
-<li>Production Setup: Configured Nginx Reverse Proxy on EC2 to expose the application professionally via Port 80.</li>
-
-<li>Technologies: AWS EC2, Docker, GitHub Actions, Node.js, Python Flask, Nginx.</li></li>
-    </ul>
+      <div class="card">
+        <h3>Network Support Assistant</h3>
+        <p><strong>Tuhin Enterprise (ISP)</strong><br>May 2022 – Jul 2023</p>
+        <ul>
+          <li>Assisted with MikroTik and Cisco switch configuration</li>
+          <li>Supported ISP clients with troubleshooting</li>
+          <li>Diagnosed routing and connectivity issues</li>
+          <li>Provided onsite and remote technical support</li>
+        </ul>
+      </div>
+    </div>
   </section>
 
-  <footer class="footer">
-    <p>📧 mazid.info67@gmail.com | 📍 Dhaka, Bangladesh</p>
+  <section id="projects">
+    <h2 class="section-title">Featured Projects</h2>
+    <p class="section-subtitle">Some real-world DevOps and infrastructure projects I built and deployed.</p>
+
+    <div class="projects-grid">
+      <div class="card">
+        <h3>Kubernetes Cluster on AWS</h3>
+        <p>Built a multi-node Kubernetes cluster using kubeadm and containerd on AWS EC2 and deployed a Task Manager application.</p>
+        <div class="project-links">
+          <a href="https://github.com/mazid-dev/task-manager-project.git" target="_blank">GitHub</a>
+          <a href="https://bit.ly/4crPwot" target="_blank">Demo</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>Terraform AWS EC2 Deployment</h3>
+        <p>Automated AWS EC2 provisioning and Security Group configuration using Terraform and Infrastructure as Code.</p>
+        <div class="project-links">
+          <a href="https://bit.ly/4bUbxfC" target="_blank">Demo</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>Flask Student Attendance App</h3>
+        <p>Created a Flask-based attendance system, containerized with Docker, and deployed on AWS EC2.</p>
+        <div class="project-links">
+          <a href="https://github.com/mazid-dev/flask-student-attendance-app.git" target="_blank">GitHub</a>
+          <a href="https://bit.ly/4s9VWgB" target="_blank">Demo</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>3-Tier AWS Application</h3>
+        <p>Deployed a 3-tier application with Vite, Node.js, MongoDB, Nginx reverse proxy, PM2, and Bash automation.</p>
+        <div class="project-links">
+          <a href="https://github.com/mazid-dev/3-tier-app-master.git" target="_blank">GitHub</a>
+          <a href="https://bit.ly/47H9fxP" target="_blank">Demo</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="contact">
+      <h2 class="section-title">Let's Connect</h2>
+      <p>If you are looking for a DevOps Engineer, IT Executive, or Infrastructure Support professional, feel free to contact me.</p>
+      <p>Email: <a href="mailto:mazid.info67@gmail.com">mazid.info67@gmail.com</a></p>
+      <p>Phone: <a href="tel:01739365972">01739365972</a></p>
+      <p>GitHub: <a href="https://github.com/mazid-dev" target="_blank">github.com/mazid-dev</a></p>
+      <p>LinkedIn: <a href="https://www.linkedin.com/in/md-mazid-hossain-293561227/" target="_blank">linkedin.com/in/md-mazid-hossain-293561227</a></p>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2026 Md Mazid Hossain | DevOps Portfolio</p>
   </footer>
+
 </body>
 </html>
