@@ -1,4 +1,4 @@
-name: Deploy Portfolio to Netlify
+name: Deploy to Netlify
 
 on:
   push:
@@ -6,25 +6,16 @@ on:
       - master
 
 jobs:
-  build-and-deploy:
+  deploy:
     runs-on: ubuntu-latest
 
     steps:
-      # Step 1: Checkout Code
-      - name: Checkout Repository
+      - name: Checkout code
         uses: actions/checkout@v4
 
-      # Step 2: Setup Node (optional but good practice)
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: '18'
-
-      # Step 3: Install Netlify CLI
       - name: Install Netlify CLI
         run: npm install -g netlify-cli
 
-      # Step 4: Deploy to Netlify
       - name: Deploy to Netlify
         run: netlify deploy --prod --dir=.
         env:
