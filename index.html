@@ -7,7 +7,7 @@
 
   <!-- SEO -->
   <meta name="description" content="Md Mazid Hossain — DevOps Engineer & IT Executive from Dhaka, Bangladesh. Skilled in AWS, Docker, Kubernetes, Terraform, and MikroTik networking.">
-  <meta name="keywords" content="Mazid Hossain, DevOps Engineer Bangladesh, AWS, Docker, Kubernetes, Terraform, MikroTik, IT Executive, Anwer Khan Modern University">
+  <meta name="keywords" content="Mazid Hossain, DevOps Engineer Bangladesh, AWS, Docker, Kubernetes, Terraform, MikroTik, IT Executive">
   <meta name="author" content="Md Mazid Hossain">
   <meta name="google-site-verification" content="bzo8lv9wVdJ8SrO7r9EM34XbGyGEyRKsLjiWbRtVUzs">
   <meta name="robots" content="index, follow">
@@ -21,10 +21,13 @@
   <!-- Fonts & Icons -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
   <style>
+    /* ═══════════════════════════════════════════
+       RESET & VARIABLES
+       ═══════════════════════════════════════════ */
     * {
       margin: 0;
       padding: 0;
@@ -95,14 +98,14 @@
     .blob {
       position: absolute;
       border-radius: 50%;
-      filter: blur(100px);
-      opacity: 0.35;
-      animation: floatBlob 15s ease-in-out infinite;
+      filter: blur(120px);
+      opacity: 0.4;
+      animation: floatBlob 18s ease-in-out infinite;
     }
 
     .blob-1 { width: 500px; height: 500px; background: #0ea5e9; top: -150px; left: -150px; }
-    .blob-2 { width: 400px; height: 400px; background: #8b5cf6; bottom: -100px; right: -100px; animation-delay: 5s; }
-    .blob-3 { width: 300px; height: 300px; background: #ec4899; top: 40%; right: 10%; animation-delay: 10s; }
+    .blob-2 { width: 400px; height: 400px; background: #8b5cf6; bottom: -100px; right: -100px; animation-delay: 6s; }
+    .blob-3 { width: 350px; height: 350px; background: #ec4899; top: 40%; right: 10%; animation-delay: 12s; }
 
     body.light-mode .blob { opacity: 0.15; }
 
@@ -110,6 +113,124 @@
       0%, 100% { transform: translate(0, 0) scale(1); }
       33% { transform: translate(40px, -30px) scale(1.1); }
       66% { transform: translate(-30px, 30px) scale(0.95); }
+    }
+
+    /* ═══════════════════════════════════════════
+       ENHANCED LOGO
+       ═══════════════════════════════════════════ */
+    .logo {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      cursor: pointer;
+      transition: var(--transition);
+      position: relative;
+    }
+
+    .logo:hover {
+      transform: translateY(-1px);
+    }
+
+    .logo-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 13px;
+      background: linear-gradient(135deg, #0ea5e9 0%, #8b5cf6 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-size: 17px;
+      font-family: 'JetBrains Mono', monospace;
+      font-weight: 700;
+      box-shadow:
+        0 8px 24px rgba(14, 165, 233, 0.45),
+        inset 0 0 0 1px rgba(255, 255, 255, 0.1);
+      transition: var(--transition);
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Logo icon inner glow */
+    .logo-icon::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle, rgba(255,255,255,0.3) 0%, transparent 60%);
+      opacity: 0;
+      transition: opacity 0.4s;
+    }
+
+    .logo:hover .logo-icon::before {
+      opacity: 1;
+    }
+
+    .logo:hover .logo-icon {
+      transform: rotate(-6deg) scale(1.08);
+      box-shadow:
+        0 12px 32px rgba(14, 165, 233, 0.6),
+        0 0 0 4px rgba(14, 165, 233, 0.1),
+        inset 0 0 0 1px rgba(255, 255, 255, 0.2);
+    }
+
+    .logo-icon span {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 16px;
+      font-weight: 700;
+      color: #fff;
+      letter-spacing: -1px;
+      z-index: 1;
+    }
+
+    /* Blinking cursor effect */
+    .logo-icon::after {
+      content: '_';
+      font-family: 'JetBrains Mono', monospace;
+      color: rgba(255, 255, 255, 0.9);
+      font-weight: 700;
+      animation: blink 1.2s ease-in-out infinite;
+      margin-left: 1px;
+      z-index: 1;
+    }
+
+    @keyframes blink {
+      0%, 50% { opacity: 1; }
+      51%, 100% { opacity: 0.3; }
+    }
+
+    .logo-text {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.1;
+    }
+
+    .logo-name {
+      font-size: 19px;
+      font-weight: 900;
+      letter-spacing: -0.7px;
+      background: linear-gradient(135deg, #0ea5e9 0%, #8b5cf6 60%, #ec4899 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-size: 200% 200%;
+      animation: gradientShift 4s ease infinite;
+    }
+
+    @keyframes gradientShift {
+      0%, 100% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+    }
+
+    .logo-role {
+      font-size: 10px;
+      font-weight: 600;
+      color: var(--text-muted);
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      margin-top: 1px;
     }
 
     /* ═══ NAVBAR ═══ */
@@ -134,48 +255,12 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 16px 24px;
-    }
-
-    .logo {
-      display: inline-flex;
-      align-items: center;
-      gap: 12px;
-      font-size: 20px;
-      font-weight: 800;
-      color: var(--text);
-      letter-spacing: -0.5px;
-      cursor: pointer;
-    }
-
-    .logo-icon {
-      width: 40px;
-      height: 40px;
-      border-radius: 12px;
-      background: linear-gradient(135deg, var(--primary), var(--accent));
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #fff;
-      font-size: 18px;
-      box-shadow: 0 6px 20px rgba(14, 165, 233, 0.35);
-      transition: var(--transition);
-    }
-
-    .logo:hover .logo-icon {
-      transform: rotate(-8deg) scale(1.08);
-    }
-
-    .logo span {
-      background: linear-gradient(135deg, var(--primary), var(--accent));
-      -webkit-background-clip: text;
-      background-clip: text;
-      -webkit-text-fill-color: transparent;
+      padding: 14px 24px;
     }
 
     .navbar ul {
       display: flex;
-      gap: 8px;
+      gap: 6px;
       align-items: center;
     }
 
@@ -187,6 +272,7 @@
       color: var(--text-soft);
       border-radius: 10px;
       transition: var(--transition);
+      position: relative;
     }
 
     .navbar ul a:hover {
@@ -201,8 +287,8 @@
     }
 
     .theme-toggle {
-      width: 40px;
-      height: 40px;
+      width: 42px;
+      height: 42px;
       border-radius: 12px;
       border: 1px solid var(--border);
       background: var(--card);
@@ -218,13 +304,14 @@
     .theme-toggle:hover {
       border-color: var(--primary);
       color: var(--primary);
-      transform: translateY(-2px);
+      transform: translateY(-2px) rotate(15deg);
+      box-shadow: 0 8px 20px rgba(14, 165, 233, 0.2);
     }
 
     .menu-toggle {
       display: none;
-      width: 40px;
-      height: 40px;
+      width: 42px;
+      height: 42px;
       border-radius: 12px;
       border: 1px solid var(--border);
       background: var(--card);
@@ -364,7 +451,6 @@
       to { opacity: 1; transform: translateY(0); }
     }
 
-    /* Hero Card */
     .hero-card {
       background: linear-gradient(145deg, var(--card), var(--bg-alt));
       border: 1px solid var(--border);
@@ -386,7 +472,7 @@
 
     .hero-card h2 {
       color: var(--primary);
-      font-size: 16px;
+      font-size: 15px;
       font-weight: 800;
       text-transform: uppercase;
       letter-spacing: 1.5px;
@@ -548,6 +634,65 @@
       font-weight: 900;
     }
 
+    /* ═══ STATS ROW ═══ */
+    .stats-row {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 20px;
+      margin-bottom: 50px;
+    }
+
+    .stat-box {
+      background: var(--card);
+      padding: 24px;
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+      text-align: center;
+      transition: var(--transition);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .stat-box::before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--primary), var(--accent));
+      transition: width 0.4s;
+    }
+
+    .stat-box:hover::before { width: 100%; }
+
+    .stat-box:hover {
+      transform: translateY(-5px);
+      border-color: var(--border-hover);
+      box-shadow: 0 12px 28px rgba(14, 165, 233, 0.12);
+    }
+
+    .stat-num {
+      font-size: 36px;
+      font-weight: 900;
+      letter-spacing: -1.5px;
+      background: linear-gradient(135deg, var(--primary), var(--accent));
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 4px;
+      line-height: 1;
+    }
+
+    .stat-label {
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--text-soft);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
     /* ═══ EXPERIENCE ═══ */
     .experience-list {
       display: flex;
@@ -637,15 +782,15 @@
     .projects-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
-      gap: 24px;
+      gap: 28px;
     }
 
     .project-card {
       background: var(--card);
-      padding: 28px;
+      padding: 32px;
       border-radius: var(--radius-lg);
       border: 1px solid var(--border);
-      transition: var(--transition);
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
       display: flex;
       flex-direction: column;
       position: relative;
@@ -655,54 +800,102 @@
     .project-card::before {
       content: '';
       position: absolute;
-      top: 0; left: 0;
-      width: 100%;
+      top: 0; left: 0; right: 0;
       height: 3px;
       background: linear-gradient(90deg, var(--primary), var(--accent), var(--pink));
-      transform: scaleX(0);
-      transform-origin: left;
-      transition: transform 0.4s ease;
+      opacity: 0.7;
+    }
+
+    .project-card::after {
+      content: '';
+      position: absolute;
+      top: 0; left: -100%;
+      width: 100%; height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(14, 165, 233, 0.06), transparent);
+      transition: left 0.6s ease;
+      pointer-events: none;
+    }
+
+    .project-card:hover::after { left: 100%; }
+
+    .project-card:hover {
+      transform: translateY(-10px);
+      border-color: var(--border-hover);
+      box-shadow: 0 24px 48px rgba(14, 165, 233, 0.2);
     }
 
     .project-card:hover::before {
-      transform: scaleX(1);
+      opacity: 1;
+      box-shadow: 0 0 20px rgba(14, 165, 233, 0.5);
     }
 
-    .project-card:hover {
-      transform: translateY(-8px);
-      border-color: var(--border-hover);
-      box-shadow: 0 20px 40px rgba(14, 165, 233, 0.15);
+    .project-number {
+      position: absolute;
+      top: 20px; right: 24px;
+      font-size: 44px;
+      font-weight: 900;
+      letter-spacing: -2px;
+      line-height: 1;
+      background: linear-gradient(135deg, var(--primary), var(--accent));
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      opacity: 0.15;
+      transition: all 0.3s;
+      pointer-events: none;
+    }
+
+    .project-card:hover .project-number {
+      opacity: 0.35;
+      transform: scale(1.1);
     }
 
     .project-icon {
-      width: 48px;
-      height: 48px;
-      border-radius: 12px;
+      width: 56px;
+      height: 56px;
+      border-radius: 16px;
       background: linear-gradient(135deg, rgba(14, 165, 233, 0.15), rgba(139, 92, 246, 0.15));
       display: flex;
       align-items: center;
       justify-content: center;
       color: var(--primary);
-      font-size: 20px;
-      margin-bottom: 18px;
+      font-size: 24px;
+      margin-bottom: 20px;
       border: 1px solid rgba(14, 165, 233, 0.2);
+      transition: all 0.3s;
+    }
+
+    .project-card:hover .project-icon {
+      transform: scale(1.08) rotate(-5deg);
+      background: linear-gradient(135deg, var(--primary), var(--accent));
+      color: #fff;
+      box-shadow: 0 8px 24px rgba(14, 165, 233, 0.4);
     }
 
     .project-card h3 {
       color: var(--text);
-      font-size: 18px;
+      font-size: 19px;
       font-weight: 800;
-      margin-bottom: 6px;
+      margin-bottom: 8px;
       letter-spacing: -0.5px;
+      line-height: 1.3;
     }
 
     .project-platform {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
       color: var(--primary);
       font-size: 12px;
       font-weight: 700;
       text-transform: uppercase;
-      letter-spacing: 0.5px;
-      margin-bottom: 14px;
+      letter-spacing: 0.8px;
+      margin-bottom: 18px;
+      padding: 5px 12px;
+      background: rgba(14, 165, 233, 0.08);
+      border: 1px solid rgba(14, 165, 233, 0.15);
+      border-radius: 8px;
+      width: fit-content;
     }
 
     .project-card ul {
@@ -716,7 +909,7 @@
       position: relative;
       padding-left: 20px;
       margin-bottom: 8px;
-      line-height: 1.6;
+      line-height: 1.65;
     }
 
     .project-card ul li::before {
@@ -728,33 +921,62 @@
       font-size: 12px;
     }
 
+    .project-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-bottom: 20px;
+    }
+
+    .project-tags span {
+      font-size: 11px;
+      font-weight: 700;
+      padding: 5px 11px;
+      border-radius: 6px;
+      background: var(--bg-alt);
+      color: var(--text-soft);
+      border: 1px solid var(--border);
+      transition: all 0.3s;
+    }
+
+    .project-card:hover .project-tags span {
+      border-color: rgba(14, 165, 233, 0.3);
+      color: var(--primary);
+    }
+
     .project-links {
       display: flex;
       gap: 10px;
       flex-wrap: wrap;
+      padding-top: 16px;
+      border-top: 1px solid var(--border);
     }
 
     .project-links a {
       display: inline-flex;
       align-items: center;
-      gap: 6px;
+      justify-content: center;
+      gap: 8px;
       font-size: 13px;
       font-weight: 700;
       color: var(--primary);
-      padding: 8px 16px;
-      border-radius: 999px;
+      padding: 10px 18px;
+      border-radius: 10px;
       background: rgba(14, 165, 233, 0.08);
       border: 1px solid rgba(14, 165, 233, 0.2);
-      transition: var(--transition);
+      transition: all 0.3s;
+      flex: 1;
     }
 
     .project-links a:hover {
-      background: var(--primary);
+      background: linear-gradient(135deg, var(--primary), var(--accent));
       color: #fff;
+      border-color: transparent;
       transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(14, 165, 233, 0.35);
     }
 
-    /* ═══ EDUCATION & CERTS (2-COL) ═══ */
+    /* ═══ EDUCATION & CERTS ═══ */
     .two-col-grid {
       display: grid;
       grid-template-columns: 1.2fr 1fr;
@@ -844,7 +1066,7 @@
       color: var(--text-soft);
     }
 
-    /* ═══ LEARNING + SOFT SKILLS ═══ */
+    /* ═══ PILLS ═══ */
     .pills-wrap {
       display: flex;
       flex-wrap: wrap;
@@ -875,6 +1097,7 @@
       border-color: var(--primary);
       color: var(--text);
       transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(14, 165, 233, 0.15);
     }
 
     /* ═══ CONTACT ═══ */
@@ -1022,9 +1245,7 @@
         z-index: 999;
       }
 
-      .navbar ul.open {
-        transform: translateY(0);
-      }
+      .navbar ul.open { transform: translateY(0); }
 
       .navbar ul a {
         display: block;
@@ -1047,6 +1268,8 @@
       .btn-group { flex-direction: column; align-items: stretch; }
       .btn { justify-content: center; }
       .scroll-top { bottom: 20px; right: 20px; }
+      .logo-role { display: none; }
+      .logo-name { font-size: 18px; }
     }
   </style>
 </head>
@@ -1061,8 +1284,13 @@
   <header>
     <nav class="navbar">
       <a href="#about" class="logo">
-        <span class="logo-icon"><i class="fas fa-terminal"></i></span>
-        <span>Mazid</span>
+        <span class="logo-icon">
+          <span>&gt;</span>
+        </span>
+        <span class="logo-text">
+          <span class="logo-name">Mazid Hossain</span>
+          <span class="logo-role">DevOps Engineer</span>
+        </span>
       </a>
       <ul id="navMenu">
         <li><a href="#about">About</a></li>
@@ -1265,11 +1493,32 @@
       <p class="section-subtitle">Real-world DevOps and infrastructure projects I built and deployed.</p>
     </div>
 
+    <div class="stats-row">
+      <div class="stat-box">
+        <div class="stat-num">6+</div>
+        <div class="stat-label">Projects Built</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-num">4+</div>
+        <div class="stat-label">Years Experience</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-num">3</div>
+        <div class="stat-label">Certifications</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-num">50+</div>
+        <div class="stat-label">Users Supported</div>
+      </div>
+    </div>
+
     <div class="projects-grid">
-      <article class="project-card">
+      <!-- PROJECT 1 -->
+      <article class="project-card" data-num="01">
+        <div class="project-number">01</div>
         <div class="project-icon"><i class="fab fa-node-js"></i></div>
         <h3>Production-Grade Node.js on Kubernetes</h3>
-        <p class="project-platform">VMware</p>
+        <p class="project-platform"><i class="fas fa-server"></i> VMware</p>
         <ul>
           <li>Deployed Node.js app on a 3-node Kubernetes cluster (1 Master + 2 Workers) using kubeadm, Calico CNI, and Nginx Ingress Controller.</li>
           <li>Containerized with multi-stage Docker build — non-root user, healthcheck, optimized image size.</li>
@@ -1278,93 +1527,55 @@
           <li>Set up Prometheus and Grafana for cluster & application monitoring.</li>
           <li>Troubleshot Pod Pending, storage permission errors, Ingress issues, and Node NotReady states.</li>
         </ul>
+        <div class="project-tags">
+          <span>Kubernetes</span><span>Helm</span><span>Calico</span><span>Prometheus</span>
+        </div>
         <div class="project-links">
           <a href="https://github.com/mazid-dev/production-ready-nodejs-k8s-helm" target="_blank" rel="noreferrer">
-            <i class="fab fa-github"></i> Code
+            <i class="fab fa-github"></i> View Code
           </a>
         </div>
       </article>
 
-      <article class="project-card">
+      <!-- PROJECT 2 -->
+      <article class="project-card" data-num="02">
+        <div class="project-number">02</div>
         <div class="project-icon"><i class="fab fa-laravel"></i></div>
         <h3>Laravel Kubernetes Deployment</h3>
-        <p class="project-platform">AWS EC2</p>
+        <p class="project-platform"><i class="fab fa-aws"></i> AWS EC2</p>
         <ul>
           <li>Deployed Laravel 11 on a self-managed Kubernetes cluster using kubeadm on AWS EC2.</li>
           <li>Containerized with multi-stage Docker build — PHP 8.3-FPM + Nginx.</li>
-          <li>Implemented init container for Laravel storage permission management and configured PVCs.</li>
+          <li>Implemented init container for Laravel storage permission management and configured Persistent Volume Claims.</li>
           <li>Troubleshot Pod Pending, storage permission errors, Ingress issues, and Node NotReady states.</li>
         </ul>
+        <div class="project-tags">
+          <span>Laravel</span><span>Kubernetes</span><span>Docker</span><span>AWS</span>
+        </div>
         <div class="project-links">
           <a href="https://github.com/mazid-dev/laravel-kubernetes-deployment" target="_blank" rel="noreferrer">
-            <i class="fab fa-github"></i> Code
+            <i class="fab fa-github"></i> View Code
           </a>
         </div>
       </article>
 
-      <article class="project-card">
-        <div class="project-icon"><i class="fas fa-server"></i></div>
+      <!-- PROJECT 3 -->
+      <article class="project-card" data-num="03">
+        <div class="project-number">03</div>
+        <div class="project-icon"><i class="fas fa-layer-group"></i></div>
         <h3>Full-Stack 3-Tier Application</h3>
-        <p class="project-platform">Self-Hosted</p>
+        <p class="project-platform"><i class="fas fa-server"></i> Self-Hosted</p>
         <ul>
           <li>Deployed 3-tier architecture: Frontend (Vite + Nginx), Backend (Node.js API), Database (MongoDB).</li>
           <li>Configured Nginx Reverse Proxy for API communication.</li>
           <li>Automated MongoDB setup using Bash scripting and managed backend processes using PM2.</li>
         </ul>
+        <div class="project-tags">
+          <span>Node.js</span><span>MongoDB</span><span>Nginx</span><span>Vite</span>
+        </div>
         <div class="project-links">
           <a href="https://github.com/mazid-dev/3-tier-app-master" target="_blank" rel="noreferrer">
-            <i class="fab fa-github"></i> Code
-          </a>
-        </div>
-      </article>
-
-      <article class="project-card">
-        <div class="project-icon"><i class="fas fa-layer-group"></i></div>
-        <h3>Terraform AWS EC2 Deployment</h3>
-        <p class="project-platform">AWS + Terraform</p>
-        <ul>
-          <li>Automated AWS EC2 provisioning and Security Group configuration using Terraform.</li>
-          <li>Implemented Infrastructure as Code (IaC) workflow for reproducible deployments.</li>
-        </ul>
-        <div class="project-links">
-          <a href="https://bit.ly/4bUbxfC" target="_blank" rel="noreferrer">
-            <i class="fas fa-external-link-alt"></i> Demo
-          </a>
-        </div>
-      </article>
-
-      <article class="project-card">
-        <div class="project-icon"><i class="fab fa-python"></i></div>
-        <h3>Flask Student Attendance App</h3>
-        <p class="project-platform">AWS EC2</p>
-        <ul>
-          <li>Created a Flask-based attendance system, containerized with Docker.</li>
-          <li>Deployed on AWS EC2 with production configuration.</li>
-        </ul>
-        <div class="project-links">
-          <a href="https://github.com/mazid-dev/flask-student-attendance-app" target="_blank" rel="noreferrer">
-            <i class="fab fa-github"></i> Code
-          </a>
-          <a href="https://bit.ly/4s9VWgB" target="_blank" rel="noreferrer">
-            <i class="fas fa-external-link-alt"></i> Demo
-          </a>
-        </div>
-      </article>
-
-      <article class="project-card">
-        <div class="project-icon"><i class="fas fa-cubes"></i></div>
-        <h3>Task Manager on Kubernetes</h3>
-        <p class="project-platform">AWS EC2</p>
-        <ul>
-          <li>Built multi-node Kubernetes cluster using kubeadm and containerd on AWS EC2.</li>
-          <li>Deployed a Task Manager application with full production configuration.</li>
-        </ul>
-        <div class="project-links">
-          <a href="https://github.com/mazid-dev/task-manager-project" target="_blank" rel="noreferrer">
-            <i class="fab fa-github"></i> Code
-          </a>
-          <a href="https://bit.ly/4crPwot" target="_blank" rel="noreferrer">
-            <i class="fas fa-external-link-alt"></i> Demo
+            <i class="fab fa-github"></i> View Code
           </a>
         </div>
       </article>
@@ -1421,7 +1632,6 @@
       </div>
     </div>
 
-    <!-- Currently Learning + Soft Skills -->
     <div style="margin-top: 70px;">
       <h3 style="font-size: 22px; font-weight: 800; margin-bottom: 8px; display: flex; align-items: center; gap: 10px;">
         <i class="fas fa-book-reader" style="color: var(--primary);"></i> Currently Learning
@@ -1481,7 +1691,7 @@
   </button>
 
   <script>
-    // ═══ Theme Toggle ═══
+    // Theme Toggle
     const themeToggle = document.getElementById('themeToggle');
     const body = document.body;
     const savedTheme = localStorage.getItem('theme');
@@ -1496,7 +1706,7 @@
       themeToggle.innerHTML = isLight ? '<i class="fas fa-moon"></i>' : '<i class="fas fa-sun"></i>';
     });
 
-    // ═══ Mobile Menu ═══
+    // Mobile Menu
     const menuToggle = document.getElementById('menuToggle');
     const navMenu = document.getElementById('navMenu');
     menuToggle.addEventListener('click', () => {
@@ -1511,7 +1721,7 @@
       });
     });
 
-    // ═══ Scroll to Top ═══
+    // Scroll to Top
     const scrollTop = document.getElementById('scrollTop');
     window.addEventListener('scroll', () => {
       if (window.scrollY > 500) scrollTop.classList.add('visible');
@@ -1521,7 +1731,7 @@
       window.scrollTo({ top: 0, behavior: 'smooth' });
     });
 
-    // ═══ Reveal on Scroll ═══
+    // Reveal on Scroll
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -1531,7 +1741,7 @@
       });
     }, { threshold: 0.1 });
 
-    document.querySelectorAll('.card, .experience-card, .project-card, .edu-card, .cert-card').forEach(el => {
+    document.querySelectorAll('.card, .experience-card, .project-card, .edu-card, .cert-card, .stat-box').forEach(el => {
       el.style.opacity = '0';
       el.style.transform = 'translateY(30px)';
       el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
