@@ -1,45 +1,131 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- SEO Description -->
-<meta name="description" content="Mazid Hossain is a DevOps Engineer and IT Executive from Bangladesh. Skilled in AWS, Docker, Kubernetes, Terraform, and Networking.">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Md Mazid Hossain | DevOps Engineer & IT Executive</title>
 
-<!-- Keywords -->
-<meta name="keywords" content="Mazid Hossain, DevOps Engineer Bangladesh, AWS, Docker, Kubernetes, Terraform, MikroTik, IT Executive">
+  <!-- SEO -->
+  <meta name="description" content="Md Mazid Hossain — DevOps Engineer & IT Executive from Dhaka, Bangladesh. Skilled in AWS, Docker, Kubernetes, Terraform, and MikroTik networking.">
+  <meta name="keywords" content="Mazid Hossain, DevOps Engineer Bangladesh, AWS, Docker, Kubernetes, Terraform, MikroTik, IT Executive, Anwer Khan Modern University">
+  <meta name="author" content="Md Mazid Hossain">
+  <meta name="google-site-verification" content="bzo8lv9wVdJ8SrO7r9EM34XbGyGEyRKsLjiWbRtVUzs">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://mazidhossain.netlify.app/">
 
-<!-- Author -->
-<meta name="author" content="Mazid Hossain">
+  <!-- Open Graph -->
+  <meta property="og:title" content="Md Mazid Hossain | DevOps Engineer">
+  <meta property="og:description" content="DevOps Engineer skilled in AWS, Docker, Kubernetes, Terraform.">
+  <meta property="og:type" content="website">
 
-<!-- Google Verification -->
-<meta name="google-site-verification" content="bzo8lv9wVdJ8SrO7r9EM34XbGyGEyRKsLjiWbRtVUzs">
+  <!-- Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-<!-- Robots -->
-<meta name="robots" content="index, follow">
-
-<!-- Canonical -->
-<link rel="canonical" href="https://mazidhossain.netlify.app/">
   <style>
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
       scroll-behavior: smooth;
-      font-family: 'Poppins', sans-serif;
     }
+
+    :root {
+      --primary: #0ea5e9;
+      --primary-dark: #0284c7;
+      --accent: #8b5cf6;
+      --pink: #ec4899;
+      --green: #22c55e;
+      --bg: #0a0f1e;
+      --bg-alt: #111827;
+      --card: #1a2234;
+      --card-hover: #1f2a42;
+      --text: #f1f5f9;
+      --text-soft: #94a3b8;
+      --text-muted: #64748b;
+      --border: rgba(148, 163, 184, 0.12);
+      --border-hover: rgba(14, 165, 233, 0.4);
+      --shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+      --shadow-lg: 0 20px 50px rgba(0, 0, 0, 0.4);
+      --radius: 16px;
+      --radius-lg: 24px;
+      --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    body.light-mode {
+      --bg: #f8fafc;
+      --bg-alt: #f1f5f9;
+      --card: #ffffff;
+      --card-hover: #f8fafc;
+      --text: #0f172a;
+      --text-soft: #475569;
+      --text-muted: #64748b;
+      --border: rgba(15, 23, 42, 0.08);
+      --border-hover: rgba(14, 165, 233, 0.5);
+      --shadow: 0 4px 20px rgba(15, 23, 42, 0.08);
+      --shadow-lg: 0 20px 50px rgba(15, 23, 42, 0.15);
+    }
+
+    html { scroll-behavior: smooth; }
 
     body {
-      background: #0f172a;
-      color: #e2e8f0;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: var(--bg);
+      color: var(--text);
       line-height: 1.7;
+      overflow-x: hidden;
+      transition: background 0.4s, color 0.4s;
     }
 
+    a { text-decoration: none; color: inherit; }
+    ul { list-style: none; }
+    img { max-width: 100%; display: block; }
+
+    /* ═══ BACKGROUND BLOBS ═══ */
+    .bg-blobs {
+      position: fixed;
+      inset: 0;
+      overflow: hidden;
+      z-index: -1;
+      pointer-events: none;
+    }
+
+    .blob {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(100px);
+      opacity: 0.35;
+      animation: floatBlob 15s ease-in-out infinite;
+    }
+
+    .blob-1 { width: 500px; height: 500px; background: #0ea5e9; top: -150px; left: -150px; }
+    .blob-2 { width: 400px; height: 400px; background: #8b5cf6; bottom: -100px; right: -100px; animation-delay: 5s; }
+    .blob-3 { width: 300px; height: 300px; background: #ec4899; top: 40%; right: 10%; animation-delay: 10s; }
+
+    body.light-mode .blob { opacity: 0.15; }
+
+    @keyframes floatBlob {
+      0%, 100% { transform: translate(0, 0) scale(1); }
+      33% { transform: translate(40px, -30px) scale(1.1); }
+      66% { transform: translate(-30px, 30px) scale(0.95); }
+    }
+
+    /* ═══ NAVBAR ═══ */
     header {
       position: sticky;
       top: 0;
-      background: rgba(15, 23, 42, 0.95);
-      backdrop-filter: blur(10px);
       z-index: 1000;
-      border-bottom: 1px solid rgba(148, 163, 184, 0.1);
+      background: rgba(10, 15, 30, 0.75);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border);
+      transition: var(--transition);
+    }
+
+    body.light-mode header {
+      background: rgba(248, 250, 252, 0.85);
     }
 
     .navbar {
@@ -48,418 +134,1410 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 18px 20px;
+      padding: 16px 24px;
     }
 
     .logo {
-      font-size: 24px;
-      font-weight: 700;
-      color: #38bdf8;
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 20px;
+      font-weight: 800;
+      color: var(--text);
+      letter-spacing: -0.5px;
+      cursor: pointer;
+    }
+
+    .logo-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, var(--primary), var(--accent));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-size: 18px;
+      box-shadow: 0 6px 20px rgba(14, 165, 233, 0.35);
+      transition: var(--transition);
+    }
+
+    .logo:hover .logo-icon {
+      transform: rotate(-8deg) scale(1.08);
+    }
+
+    .logo span {
+      background: linear-gradient(135deg, var(--primary), var(--accent));
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
 
     .navbar ul {
       display: flex;
-      list-style: none;
-      gap: 22px;
+      gap: 8px;
+      align-items: center;
     }
 
-    .navbar a {
-      text-decoration: none;
-      color: #cbd5e1;
+    .navbar ul a {
+      display: inline-block;
+      padding: 8px 16px;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--text-soft);
+      border-radius: 10px;
+      transition: var(--transition);
+    }
+
+    .navbar ul a:hover {
+      color: var(--primary);
+      background: rgba(14, 165, 233, 0.1);
+    }
+
+    .nav-actions {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+
+    .theme-toggle {
+      width: 40px;
+      height: 40px;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      background: var(--card);
+      color: var(--text);
+      cursor: pointer;
       font-size: 15px;
-      transition: 0.3s;
+      transition: var(--transition);
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
 
-    .navbar a:hover {
-      color: #38bdf8;
+    .theme-toggle:hover {
+      border-color: var(--primary);
+      color: var(--primary);
+      transform: translateY(-2px);
     }
 
+    .menu-toggle {
+      display: none;
+      width: 40px;
+      height: 40px;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      background: var(--card);
+      color: var(--text);
+      cursor: pointer;
+      font-size: 15px;
+    }
+
+    /* ═══ HERO ═══ */
     .hero {
       max-width: 1200px;
       margin: auto;
-      min-height: 100vh;
+      min-height: calc(100vh - 72px);
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      grid-template-columns: 1.3fr 1fr;
       align-items: center;
-      gap: 50px;
-      padding: 60px 20px;
+      gap: 60px;
+      padding: 60px 24px;
     }
 
-    .hero-text h3 {
-      color: #38bdf8;
-      font-size: 20px;
-      margin-bottom: 10px;
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 18px;
+      border-radius: 999px;
+      background: rgba(34, 197, 94, 0.1);
+      border: 1px solid rgba(34, 197, 94, 0.3);
+      color: var(--green);
+      font-size: 13px;
+      font-weight: 700;
+      margin-bottom: 24px;
+      animation: fadeUp 0.6s ease-out;
+    }
+
+    .hero-badge .dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--green);
+      box-shadow: 0 0 0 4px rgba(34, 197, 94, 0.2);
+      animation: pulseDot 2s ease-in-out infinite;
+    }
+
+    @keyframes pulseDot {
+      0%, 100% { box-shadow: 0 0 0 4px rgba(34, 197, 94, 0.2); }
+      50% { box-shadow: 0 0 0 8px rgba(34, 197, 94, 0.05); }
     }
 
     .hero-text h1 {
-      font-size: 52px;
-      line-height: 1.2;
-      margin-bottom: 18px;
+      font-size: clamp(36px, 5.5vw, 60px);
+      line-height: 1.1;
+      font-weight: 900;
+      letter-spacing: -2px;
+      margin-bottom: 16px;
+      animation: fadeUp 0.6s ease-out 0.1s both;
+    }
+
+    .hero-text h1 .gradient {
+      background: linear-gradient(135deg, var(--primary), var(--accent), var(--pink));
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero-text .role {
+      font-size: clamp(18px, 2vw, 22px);
+      color: var(--primary);
+      font-weight: 700;
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      animation: fadeUp 0.6s ease-out 0.15s both;
     }
 
     .hero-text p {
-      color: #cbd5e1;
-      margin-bottom: 25px;
-      max-width: 650px;
+      color: var(--text-soft);
+      font-size: 16px;
+      line-height: 1.8;
+      margin-bottom: 32px;
+      max-width: 620px;
+      animation: fadeUp 0.6s ease-out 0.2s both;
+    }
+
+    .hero-text p strong {
+      color: var(--text);
+      font-weight: 700;
     }
 
     .btn-group {
       display: flex;
       flex-wrap: wrap;
-      gap: 15px;
+      gap: 14px;
+      animation: fadeUp 0.6s ease-out 0.25s both;
     }
 
     .btn {
-      padding: 14px 28px;
-      border-radius: 10px;
-      text-decoration: none;
-      font-weight: 600;
-      transition: 0.3s;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 14px 26px;
+      border-radius: 12px;
+      font-weight: 700;
+      font-size: 15px;
+      transition: var(--transition);
+      cursor: pointer;
+      border: none;
     }
 
     .btn-primary {
-      background: #38bdf8;
-      color: #0f172a;
+      background: linear-gradient(135deg, var(--primary), var(--accent));
+      color: #fff;
+      box-shadow: 0 8px 24px rgba(14, 165, 233, 0.4);
     }
 
     .btn-primary:hover {
-      background: #0ea5e9;
       transform: translateY(-3px);
+      box-shadow: 0 12px 32px rgba(14, 165, 233, 0.55);
     }
 
     .btn-outline {
-      border: 1px solid #38bdf8;
-      color: #38bdf8;
+      background: transparent;
+      color: var(--text);
+      border: 1.5px solid var(--border);
     }
 
     .btn-outline:hover {
-      background: #38bdf8;
-      color: #0f172a;
+      border-color: var(--primary);
+      color: var(--primary);
+      transform: translateY(-3px);
+      background: rgba(14, 165, 233, 0.05);
     }
 
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(24px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Hero Card */
     .hero-card {
-      background: linear-gradient(145deg, #1e293b, #0f172a);
-      border: 1px solid rgba(56, 189, 248, 0.15);
-      border-radius: 24px;
-      padding: 35px;
-      box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+      background: linear-gradient(145deg, var(--card), var(--bg-alt));
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 32px;
+      box-shadow: var(--shadow-lg);
+      position: relative;
+      overflow: hidden;
+      animation: fadeUp 0.6s ease-out 0.3s both;
+    }
+
+    .hero-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, var(--primary), var(--accent), var(--pink));
     }
 
     .hero-card h2 {
-      color: #38bdf8;
-      margin-bottom: 18px;
+      color: var(--primary);
+      font-size: 16px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      margin-bottom: 24px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
     }
 
     .hero-card ul {
-      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
     }
 
     .hero-card li {
-      margin-bottom: 14px;
-      color: #cbd5e1;
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid var(--border);
+      font-size: 14px;
     }
 
+    .hero-card li:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+
+    .hero-card .info-icon {
+      width: 36px;
+      height: 36px;
+      border-radius: 10px;
+      background: rgba(14, 165, 233, 0.1);
+      color: var(--primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 15px;
+      flex-shrink: 0;
+    }
+
+    .hero-card .info-content {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .hero-card .info-label {
+      color: var(--text-muted);
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      font-weight: 700;
+      margin-bottom: 2px;
+    }
+
+    .hero-card .info-value {
+      color: var(--text);
+      font-weight: 600;
+    }
+
+    /* ═══ SECTIONS ═══ */
     section {
       max-width: 1200px;
       margin: auto;
-      padding: 90px 20px;
+      padding: 100px 24px;
+    }
+
+    .section-tag {
+      display: inline-block;
+      font-size: 12px;
+      font-weight: 800;
+      color: var(--primary);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 12px;
     }
 
     .section-title {
-      text-align: center;
-      font-size: 38px;
-      margin-bottom: 15px;
-      color: #38bdf8;
+      font-size: clamp(28px, 4vw, 42px);
+      font-weight: 900;
+      letter-spacing: -1px;
+      margin-bottom: 16px;
+      line-height: 1.2;
     }
 
     .section-subtitle {
-      text-align: center;
-      color: #94a3b8;
+      color: var(--text-soft);
       max-width: 700px;
-      margin: 0 auto 50px;
+      font-size: 16px;
+      margin-bottom: 60px;
     }
 
-    .skills-grid,
-    .projects-grid,
-    .experience-grid {
+    .section-header {
+      margin-bottom: 60px;
+    }
+
+    /* ═══ SKILLS ═══ */
+    .skills-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 25px;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
     }
 
     .card {
-      background: #1e293b;
+      background: var(--card);
       padding: 28px;
-      border-radius: 20px;
-      border: 1px solid rgba(148, 163, 184, 0.1);
-      transition: 0.3s;
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--border);
+      transition: var(--transition);
     }
 
     .card:hover {
-      transform: translateY(-8px);
-      border-color: rgba(56, 189, 248, 0.4);
+      transform: translateY(-6px);
+      border-color: var(--border-hover);
+      box-shadow: 0 20px 40px rgba(14, 165, 233, 0.15);
+      background: var(--card-hover);
+    }
+
+    .card-icon {
+      width: 52px;
+      height: 52px;
+      border-radius: 14px;
+      background: linear-gradient(135deg, rgba(14, 165, 233, 0.15), rgba(139, 92, 246, 0.15));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--primary);
+      font-size: 22px;
+      margin-bottom: 20px;
+      border: 1px solid rgba(14, 165, 233, 0.2);
     }
 
     .card h3 {
-      color: #38bdf8;
-      margin-bottom: 15px;
-      font-size: 22px;
+      color: var(--text);
+      margin-bottom: 16px;
+      font-size: 18px;
+      font-weight: 800;
+      letter-spacing: -0.5px;
     }
 
     .card ul {
-      padding-left: 18px;
-      color: #cbd5e1;
+      color: var(--text-soft);
+      font-size: 14px;
+    }
+
+    .card ul li {
+      position: relative;
+      padding-left: 22px;
+      margin-bottom: 10px;
+      line-height: 1.6;
+    }
+
+    .card ul li::before {
+      content: '▸';
+      position: absolute;
+      left: 0;
+      color: var(--primary);
+      font-weight: 900;
+    }
+
+    /* ═══ EXPERIENCE ═══ */
+    .experience-list {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    .experience-card {
+      background: var(--card);
+      padding: 32px;
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--border);
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 28px;
+      transition: var(--transition);
+    }
+
+    .experience-card:hover {
+      border-color: var(--border-hover);
+      box-shadow: 0 20px 40px rgba(14, 165, 233, 0.1);
+      transform: translateX(6px);
+    }
+
+    .exp-icon {
+      width: 60px;
+      height: 60px;
+      border-radius: 16px;
+      background: linear-gradient(135deg, var(--primary), var(--accent));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-size: 24px;
+      box-shadow: 0 8px 24px rgba(14, 165, 233, 0.35);
+      flex-shrink: 0;
+    }
+
+    .exp-content h3 {
+      color: var(--text);
+      font-size: 20px;
+      font-weight: 800;
+      margin-bottom: 4px;
+    }
+
+    .exp-company {
+      color: var(--primary);
+      font-weight: 700;
+      font-size: 15px;
+      margin-bottom: 8px;
+    }
+
+    .exp-period {
+      color: var(--text-muted);
+      font-size: 13px;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 4px 12px;
+      background: var(--bg-alt);
+      border-radius: 999px;
+      margin-bottom: 16px;
+    }
+
+    .exp-content ul {
+      color: var(--text-soft);
+      font-size: 14px;
+    }
+
+    .exp-content ul li {
+      position: relative;
+      padding-left: 22px;
+      margin-bottom: 8px;
+      line-height: 1.6;
+    }
+
+    .exp-content ul li::before {
+      content: '✓';
+      position: absolute;
+      left: 0;
+      color: var(--primary);
+      font-weight: 900;
+    }
+
+    /* ═══ PROJECTS ═══ */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+      gap: 24px;
+    }
+
+    .project-card {
+      background: var(--card);
+      padding: 28px;
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--border);
+      transition: var(--transition);
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .project-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%;
+      height: 3px;
+      background: linear-gradient(90deg, var(--primary), var(--accent), var(--pink));
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.4s ease;
+    }
+
+    .project-card:hover::before {
+      transform: scaleX(1);
+    }
+
+    .project-card:hover {
+      transform: translateY(-8px);
+      border-color: var(--border-hover);
+      box-shadow: 0 20px 40px rgba(14, 165, 233, 0.15);
+    }
+
+    .project-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, rgba(14, 165, 233, 0.15), rgba(139, 92, 246, 0.15));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--primary);
+      font-size: 20px;
+      margin-bottom: 18px;
+      border: 1px solid rgba(14, 165, 233, 0.2);
+    }
+
+    .project-card h3 {
+      color: var(--text);
+      font-size: 18px;
+      font-weight: 800;
+      margin-bottom: 6px;
+      letter-spacing: -0.5px;
+    }
+
+    .project-platform {
+      color: var(--primary);
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 14px;
+    }
+
+    .project-card ul {
+      color: var(--text-soft);
+      font-size: 13.5px;
+      margin-bottom: 20px;
+      flex-grow: 1;
+    }
+
+    .project-card ul li {
+      position: relative;
+      padding-left: 20px;
+      margin-bottom: 8px;
+      line-height: 1.6;
+    }
+
+    .project-card ul li::before {
+      content: '✓';
+      position: absolute;
+      left: 0;
+      color: var(--primary);
+      font-weight: 900;
+      font-size: 12px;
     }
 
     .project-links {
-      margin-top: 18px;
       display: flex;
-      gap: 12px;
+      gap: 10px;
       flex-wrap: wrap;
     }
 
     .project-links a {
-      text-decoration: none;
-      color: #38bdf8;
-      border: 1px solid #38bdf8;
-      padding: 8px 14px;
-      border-radius: 8px;
-      font-size: 14px;
-      transition: 0.3s;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--primary);
+      padding: 8px 16px;
+      border-radius: 999px;
+      background: rgba(14, 165, 233, 0.08);
+      border: 1px solid rgba(14, 165, 233, 0.2);
+      transition: var(--transition);
     }
 
     .project-links a:hover {
-      background: #38bdf8;
-      color: #0f172a;
+      background: var(--primary);
+      color: #fff;
+      transform: translateY(-2px);
     }
 
-    .contact {
+    /* ═══ EDUCATION & CERTS (2-COL) ═══ */
+    .two-col-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 40px;
+      align-items: start;
+    }
+
+    .edu-card {
+      background: var(--card);
+      padding: 28px;
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--border);
+      margin-bottom: 20px;
+      border-left: 4px solid var(--primary);
+      transition: var(--transition);
+    }
+
+    .edu-card:hover {
+      transform: translateX(6px);
+      box-shadow: 0 12px 28px rgba(14, 165, 233, 0.12);
+    }
+
+    .edu-card h3 {
+      font-size: 17px;
+      font-weight: 800;
+      color: var(--text);
+      margin-bottom: 6px;
+    }
+
+    .edu-card .institute {
+      color: var(--text-soft);
+      font-size: 14px;
+      margin-bottom: 8px;
+    }
+
+    .edu-card .meta {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--primary);
+      padding: 4px 12px;
+      background: rgba(14, 165, 233, 0.1);
+      border-radius: 999px;
+    }
+
+    .cert-card {
+      background: var(--card);
+      padding: 22px;
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+      margin-bottom: 12px;
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+      transition: var(--transition);
+    }
+
+    .cert-card:hover {
+      border-color: var(--border-hover);
+      transform: translateY(-3px);
+    }
+
+    .cert-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, rgba(139, 92, 246, 0.15), rgba(236, 72, 153, 0.15));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--accent);
+      font-size: 18px;
+      flex-shrink: 0;
+    }
+
+    .cert-content h4 {
+      font-size: 15px;
+      font-weight: 800;
+      color: var(--text);
+      margin-bottom: 3px;
+    }
+
+    .cert-content p {
+      font-size: 13px;
+      color: var(--text-soft);
+    }
+
+    /* ═══ LEARNING + SOFT SKILLS ═══ */
+    .pills-wrap {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 16px;
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 18px;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--text-soft);
+      transition: var(--transition);
+    }
+
+    .pill i {
+      color: var(--primary);
+      font-size: 13px;
+    }
+
+    .pill:hover {
+      border-color: var(--primary);
+      color: var(--text);
+      transform: translateY(-2px);
+    }
+
+    /* ═══ CONTACT ═══ */
+    .contact-wrap {
+      background: linear-gradient(135deg, rgba(14, 165, 233, 0.08), rgba(139, 92, 246, 0.08));
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 60px 40px;
       text-align: center;
-      background: #1e293b;
-      border-radius: 24px;
-      padding: 50px 20px;
+      position: relative;
+      overflow: hidden;
     }
 
-    .contact p {
-      color: #cbd5e1;
-      margin: 12px 0;
+    .contact-wrap::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, var(--primary), var(--accent), var(--pink));
     }
 
-    .contact a {
-      color: #38bdf8;
-      text-decoration: none;
+    .contact-wrap h2 {
+      font-size: clamp(28px, 4vw, 40px);
+      font-weight: 900;
+      letter-spacing: -1px;
+      margin-bottom: 16px;
     }
 
+    .contact-wrap p {
+      color: var(--text-soft);
+      max-width: 620px;
+      margin: 0 auto 32px;
+      font-size: 16px;
+    }
+
+    .contact-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 14px;
+      margin-top: 32px;
+    }
+
+    .contact-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 14px 24px;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--text);
+      transition: var(--transition);
+    }
+
+    .contact-btn i {
+      color: var(--primary);
+      font-size: 16px;
+    }
+
+    .contact-btn:hover {
+      border-color: var(--primary);
+      transform: translateY(-3px);
+      box-shadow: 0 12px 28px rgba(14, 165, 233, 0.2);
+    }
+
+    /* ═══ FOOTER ═══ */
     footer {
       text-align: center;
-      padding: 30px 20px;
-      color: #94a3b8;
-      border-top: 1px solid rgba(148, 163, 184, 0.1);
+      padding: 40px 24px;
+      color: var(--text-muted);
+      font-size: 14px;
+      border-top: 1px solid var(--border);
+      background: var(--bg-alt);
     }
 
-    @media (max-width: 768px) {
-      .navbar {
-        flex-direction: column;
-        gap: 15px;
+    footer strong {
+      background: linear-gradient(135deg, var(--primary), var(--accent));
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    /* ═══ SCROLL TO TOP ═══ */
+    .scroll-top {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      width: 48px;
+      height: 48px;
+      border-radius: 14px;
+      background: linear-gradient(135deg, var(--primary), var(--accent));
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      font-size: 18px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 8px 24px rgba(14, 165, 233, 0.4);
+      opacity: 0;
+      visibility: hidden;
+      transition: var(--transition);
+      z-index: 999;
+    }
+
+    .scroll-top.visible {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .scroll-top:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 32px rgba(14, 165, 233, 0.6);
+    }
+
+    /* ═══ RESPONSIVE ═══ */
+    @media (max-width: 900px) {
+      .hero {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        padding: 40px 24px;
+        min-height: auto;
+      }
+
+      .two-col-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
       }
 
       .navbar ul {
-        flex-wrap: wrap;
-        justify-content: center;
+        position: fixed;
+        top: 72px;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        background: var(--bg-alt);
+        padding: 20px;
+        border-bottom: 1px solid var(--border);
+        gap: 4px;
+        transform: translateY(-150%);
+        transition: transform 0.3s ease;
+        z-index: 999;
       }
 
-      .hero-text h1 {
-        font-size: 38px;
+      .navbar ul.open {
+        transform: translateY(0);
       }
+
+      .navbar ul a {
+        display: block;
+        padding: 12px 16px;
+        width: 100%;
+      }
+
+      .menu-toggle {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+
+    @media (max-width: 600px) {
+      section { padding: 70px 20px; }
+      .hero-card { padding: 24px; }
+      .experience-card { grid-template-columns: 1fr; gap: 16px; }
+      .contact-wrap { padding: 40px 24px; }
+      .btn-group { flex-direction: column; align-items: stretch; }
+      .btn { justify-content: center; }
+      .scroll-top { bottom: 20px; right: 20px; }
     }
   </style>
 </head>
 <body>
 
+  <div class="bg-blobs">
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="blob blob-3"></div>
+  </div>
+
   <header>
     <nav class="navbar">
-      <div class="logo">Md Mazid Hossain</div>
-      <ul>
+      <a href="#about" class="logo">
+        <span class="logo-icon"><i class="fas fa-terminal"></i></span>
+        <span>Mazid</span>
+      </a>
+      <ul id="navMenu">
         <li><a href="#about">About</a></li>
         <li><a href="#skills">Skills</a></li>
         <li><a href="#experience">Experience</a></li>
         <li><a href="#projects">Projects</a></li>
+        <li><a href="#education">Education</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
+      <div class="nav-actions">
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+          <i class="fas fa-sun"></i>
+        </button>
+        <button class="menu-toggle" id="menuToggle" aria-label="Menu">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
     </nav>
   </header>
 
+  <!-- HERO -->
   <section class="hero" id="about">
     <div class="hero-text">
-      <h3>Hello, I'm </h3>
-      <h1>Md Mazid Hossain</h1>
-      <h3>Aspiring DevOps Engineer & IT Executive</h3>
-      <p>
-Aspiring DevOps Engineer with hands-on experience in AWS, Docker, Kubernetes, and Terraform. Currently working as
-an IT Executive with 4+ years of experience in networking and infrastructure support.
-Skilled in deploying real-world applications including 3-tier architectures, containerized Flask applications, and
-Kubernetes clusters on AWS EC2. Passionate about automation, CI/CD, and cloud-native technologies, seeking an
-opportunity to contribute to a dynamic DevOps team.
+      <span class="hero-badge">
+        <span class="dot"></span>
+        Available for opportunities
+      </span>
 
+      <h1>
+        Hi, I'm <span class="gradient">Md Mazid<br>Hossain</span>
+      </h1>
+
+      <p class="role">
+        <i class="fas fa-rocket"></i>
+        DevOps Engineer & IT Executive
+      </p>
+
+      <p>
+        DevOps-focused IT professional with <strong>4+ years</strong> of experience in IT infrastructure,
+        networking, Linux, and system administration. Hands-on experience building
+        <strong>containerized applications</strong>, <strong>Kubernetes clusters</strong>,
+        <strong>CI/CD workflows</strong>, <strong>Infrastructure as Code (Terraform)</strong>, and
+        <strong>AWS environments</strong> through practical projects.
       </p>
 
       <div class="btn-group">
-        <a href="https://github.com/mazid-dev" class="btn btn-primary" target="_blank">View GitHub</a>
-        <a href="https://www.linkedin.com/in/md-mazid-hossain-293561227/" class="btn btn-outline" target="_blank">LinkedIn</a>
+        <a href="https://github.com/mazid-dev" class="btn btn-primary" target="_blank" rel="noreferrer">
+          <i class="fab fa-github"></i> View GitHub
+        </a>
+        <a href="https://www.linkedin.com/in/md-mazid-hossain-293561227/" class="btn btn-outline" target="_blank" rel="noreferrer">
+          <i class="fab fa-linkedin"></i> LinkedIn
+        </a>
+        <a href="mailto:mazid.info67@gmail.com" class="btn btn-outline">
+          <i class="fas fa-envelope"></i> Contact
+        </a>
       </div>
     </div>
 
-    <div class="hero-card">
-      <h2>Quick Info</h2>
+    <aside class="hero-card">
+      <h2><i class="fas fa-id-card"></i> Quick Info</h2>
       <ul>
-        <li><strong>Location:</strong> Dhaka, Bangladesh</li>
-        <li><strong>Email:</strong> mazid.info67@gmail.com</li>
-        <li><strong>Phone:</strong> 01739365972</li>
-        <li><strong>Current Role:</strong> Executive – IT at VCube Soft and Tech</li>
-        <li><strong>Goal:</strong> Join a DevOps team and build cloud-native solutions</li>
+        <li>
+          <span class="info-icon"><i class="fas fa-map-marker-alt"></i></span>
+          <div class="info-content">
+            <span class="info-label">Location</span>
+            <span class="info-value">Dhaka, Bangladesh</span>
+          </div>
+        </li>
+        <li>
+          <span class="info-icon"><i class="fas fa-envelope"></i></span>
+          <div class="info-content">
+            <span class="info-label">Email</span>
+            <span class="info-value">mazid.info67@gmail.com</span>
+          </div>
+        </li>
+        <li>
+          <span class="info-icon"><i class="fas fa-phone"></i></span>
+          <div class="info-content">
+            <span class="info-label">Phone</span>
+            <span class="info-value">+880 1739 365972</span>
+          </div>
+        </li>
+        <li>
+          <span class="info-icon"><i class="fas fa-briefcase"></i></span>
+          <div class="info-content">
+            <span class="info-label">Current Role</span>
+            <span class="info-value">Executive – IT @ VCube Soft and Tech</span>
+          </div>
+        </li>
+        <li>
+          <span class="info-icon"><i class="fas fa-graduation-cap"></i></span>
+          <div class="info-content">
+            <span class="info-label">Education</span>
+            <span class="info-value">B.Sc. CSE · AKMU · CGPA 3.52</span>
+          </div>
+        </li>
       </ul>
-    </div>
+    </aside>
   </section>
 
+  <!-- SKILLS -->
   <section id="skills">
-    <h2 class="section-title">Technical Skills</h2>
-    <p class="section-subtitle">Technologies and tools I use in networking, cloud, automation, and infrastructure.</p>
+    <div class="section-header">
+      <span class="section-tag">What I Do</span>
+      <h2 class="section-title">Technical Skills</h2>
+      <p class="section-subtitle">Technologies and tools I use in cloud, automation, orchestration, and networking.</p>
+    </div>
 
     <div class="skills-grid">
-      <div class="card">
-        <h3>DevOps & Cloud</h3>
+      <article class="card">
+        <div class="card-icon"><i class="fas fa-cloud"></i></div>
+        <h3>Cloud & Infrastructure</h3>
+        <ul>
+          <li>AWS (EC2, S3, IAM) – Foundational</li>
+          <li>Terraform (Infrastructure as Code)</li>
+          <li>Helm (Kubernetes package manager)</li>
+          <li>Linux (Ubuntu CLI)</li>
+        </ul>
+      </article>
+
+      <article class="card">
+        <div class="card-icon"><i class="fas fa-cubes"></i></div>
+        <h3>Containers & Orchestration</h3>
         <ul>
           <li>Docker & Docker Compose</li>
-          <li>Kubernetes (kubeadm, Minikube, containerd)</li>
-          <li>AWS EC2, S3, IAM, RDS</li>
-          <li>Terraform (Infrastructure as Code)</li>
-          <li>GitHub Actions & Jenkins</li>
+          <li>Kubernetes (kubeadm, containerd, Minikube)</li>
+          <li>Nginx Ingress Controller, Calico CNI</li>
+          <li>HPA, Persistent Volumes, ConfigMaps, Secrets</li>
         </ul>
-      </div>
+      </article>
 
-      <div class="card">
-        <h3>Systems & Scripting</h3>
+      <article class="card">
+        <div class="card-icon"><i class="fas fa-code-branch"></i></div>
+        <h3>CI/CD & Version Control</h3>
         <ul>
-          <li>Linux Ubuntu CLI</li>
+          <li>Git & GitHub</li>
+          <li>GitHub Actions</li>
+          <li>Jenkins (Basic)</li>
           <li>Bash Scripting</li>
-          <li>Windows Server</li>
-          <li>ADDS, DNS, DHCP</li>
-          <li>Automation Tasks</li>
         </ul>
-      </div>
+      </article>
 
-      <div class="card">
-        <h3>Networking</h3>
+      <article class="card">
+        <div class="card-icon"><i class="fas fa-network-wired"></i></div>
+        <h3>Networking & Systems</h3>
         <ul>
-          <li>MikroTik: PPPoE, NAT, VLAN, VPN</li>
-          <li>Cisco Routing & Switching</li>
-          <li>TCP/IP & DNS</li>
-          <li>Firewall Fundamentals</li>
-          <li>LAN & Infrastructure Support</li>
+          <li>MikroTik (Routing, VLAN, VPN, NAT, PPPoE)</li>
+          <li>Nginx, TCP/IP, DNS, Firewall</li>
+          <li>Enterprise infrastructure troubleshooting</li>
+          <li>Windows Server, ADDS, DHCP</li>
         </ul>
-      </div>
+      </article>
     </div>
   </section>
 
+  <!-- EXPERIENCE -->
   <section id="experience">
-    <h2 class="section-title">Professional Experience</h2>
-    <p class="section-subtitle">My experience in IT support, networking, and infrastructure management.</p>
+    <div class="section-header">
+      <span class="section-tag">Career</span>
+      <h2 class="section-title">Professional Experience</h2>
+      <p class="section-subtitle">My experience in IT support, networking, and infrastructure management.</p>
+    </div>
 
-    <div class="experience-grid">
-      <div class="card">
-        <h3>Executive – IT</h3>
-        <p><strong>VCube Soft and Tech</strong><br>Aug 2023 – Present</p>
-        <ul>
-          <li>Maintained secure office LAN and VLAN infrastructure</li>
-          <li>Configured MikroTik routers, NAT, VPN, and routing</li>
-          <li>Provided support for 50+ users</li>
-          <li>Managed Windows Server and user accounts</li>
-          <li>Troubleshot system and network performance issues</li>
-        </ul>
-      </div>
+    <div class="experience-list">
+      <article class="experience-card">
+        <div class="exp-icon"><i class="fas fa-briefcase"></i></div>
+        <div class="exp-content">
+          <h3>Executive – IT</h3>
+          <p class="exp-company">VCube Soft and Tech, Dhaka</p>
+          <span class="exp-period"><i class="fas fa-calendar"></i> Aug 2023 – Present</span>
+          <ul>
+            <li>Managed office LAN/WAN infrastructure using MikroTik, including VLAN, PPPoE, NAT, VPN, Routing, Load Balancing, and Failover.</li>
+            <li>Provided IT support for 50+ users, resolving hardware, software, printer, and network-related issues.</li>
+            <li>Monitored and troubleshot network and system performance to maintain reliable IT operations.</li>
+          </ul>
+        </div>
+      </article>
 
-      <div class="card">
-        <h3>Network Support Assistant</h3>
-        <p><strong>Tuhin Enterprise (ISP)</strong><br>May 2022 – Jul 2023</p>
-        <ul>
-          <li>Assisted with MikroTik and Cisco switch configuration</li>
-          <li>Supported ISP clients with troubleshooting</li>
-          <li>Diagnosed routing and connectivity issues</li>
-          <li>Provided onsite and remote technical support</li>
-        </ul>
-      </div>
+      <article class="experience-card">
+        <div class="exp-icon"><i class="fas fa-network-wired"></i></div>
+        <div class="exp-content">
+          <h3>Network Support Assistant</h3>
+          <p class="exp-company">Tuhin Enterprise (ISP), Dhaka</p>
+          <span class="exp-period"><i class="fas fa-calendar"></i> May 2022 – Jul 2023</span>
+          <ul>
+            <li>Assisted with MikroTik router and Cisco switch configuration.</li>
+            <li>Supported ISP client connectivity, routing, bandwidth, and LAN-related troubleshooting.</li>
+            <li>Provided onsite and remote technical support.</li>
+          </ul>
+        </div>
+      </article>
     </div>
   </section>
 
+  <!-- PROJECTS -->
   <section id="projects">
-    <h2 class="section-title">Featured Projects</h2>
-    <p class="section-subtitle">Some real-world DevOps and infrastructure projects I built and deployed.</p>
-
-  
+    <div class="section-header">
+      <span class="section-tag">Portfolio</span>
+      <h2 class="section-title">Featured Projects</h2>
+      <p class="section-subtitle">Real-world DevOps and infrastructure projects I built and deployed.</p>
+    </div>
 
     <div class="projects-grid">
-      <div class="card">
-        <h3>Kubernetes Cluster on AWS</h3>
-        <p>Built a multi-node Kubernetes cluster using kubeadm and containerd on AWS EC2 and deployed a Task Manager application.</p>
+      <article class="project-card">
+        <div class="project-icon"><i class="fab fa-node-js"></i></div>
+        <h3>Production-Grade Node.js on Kubernetes</h3>
+        <p class="project-platform">VMware</p>
+        <ul>
+          <li>Deployed Node.js app on a 3-node Kubernetes cluster (1 Master + 2 Workers) using kubeadm, Calico CNI, and Nginx Ingress Controller.</li>
+          <li>Containerized with multi-stage Docker build — non-root user, healthcheck, optimized image size.</li>
+          <li>Created Helm chart with 2 replicas, liveness/readiness probes, ConfigMap, Persistent Volume, and resource limits.</li>
+          <li>Configured HPA auto-scaling (2–5 replicas) based on CPU and memory utilization.</li>
+          <li>Set up Prometheus and Grafana for cluster & application monitoring.</li>
+          <li>Troubleshot Pod Pending, storage permission errors, Ingress issues, and Node NotReady states.</li>
+        </ul>
         <div class="project-links">
-          <a href="https://github.com/mazid-dev/task-manager-project.git" target="_blank">GitHub</a>
-          <a href="https://bit.ly/4crPwot" target="_blank">Demo</a>
+          <a href="https://github.com/mazid-dev/production-ready-nodejs-k8s-helm" target="_blank" rel="noreferrer">
+            <i class="fab fa-github"></i> Code
+          </a>
         </div>
-      </div>
-      
-       <div class="card">
-  <h3>Laravel Kubernetes Deployment</h3>
-  <p>
-    Containerized a Laravel application using Docker (multi-stage build) and deployed it on a Kubernetes cluster built with kubeadm on AWS EC2. Configured Helm charts, Ingress controller, ConfigMap, Secret, and Persistent Volume for production-like deployment.
-  </p>
-  <div class="project-links">
-    <a href="https://github.com/mazid-dev/laravel-kubernetes-deployment" target="_blank">GitHub</a>
-   
-  </div>
-</div>
+      </article>
 
-      <div class="card">
+      <article class="project-card">
+        <div class="project-icon"><i class="fab fa-laravel"></i></div>
+        <h3>Laravel Kubernetes Deployment</h3>
+        <p class="project-platform">AWS EC2</p>
+        <ul>
+          <li>Deployed Laravel 11 on a self-managed Kubernetes cluster using kubeadm on AWS EC2.</li>
+          <li>Containerized with multi-stage Docker build — PHP 8.3-FPM + Nginx.</li>
+          <li>Implemented init container for Laravel storage permission management and configured PVCs.</li>
+          <li>Troubleshot Pod Pending, storage permission errors, Ingress issues, and Node NotReady states.</li>
+        </ul>
+        <div class="project-links">
+          <a href="https://github.com/mazid-dev/laravel-kubernetes-deployment" target="_blank" rel="noreferrer">
+            <i class="fab fa-github"></i> Code
+          </a>
+        </div>
+      </article>
+
+      <article class="project-card">
+        <div class="project-icon"><i class="fas fa-server"></i></div>
+        <h3>Full-Stack 3-Tier Application</h3>
+        <p class="project-platform">Self-Hosted</p>
+        <ul>
+          <li>Deployed 3-tier architecture: Frontend (Vite + Nginx), Backend (Node.js API), Database (MongoDB).</li>
+          <li>Configured Nginx Reverse Proxy for API communication.</li>
+          <li>Automated MongoDB setup using Bash scripting and managed backend processes using PM2.</li>
+        </ul>
+        <div class="project-links">
+          <a href="https://github.com/mazid-dev/3-tier-app-master" target="_blank" rel="noreferrer">
+            <i class="fab fa-github"></i> Code
+          </a>
+        </div>
+      </article>
+
+      <article class="project-card">
+        <div class="project-icon"><i class="fas fa-layer-group"></i></div>
         <h3>Terraform AWS EC2 Deployment</h3>
-        <p>Automated AWS EC2 provisioning and Security Group configuration using Terraform and Infrastructure as Code.</p>
+        <p class="project-platform">AWS + Terraform</p>
+        <ul>
+          <li>Automated AWS EC2 provisioning and Security Group configuration using Terraform.</li>
+          <li>Implemented Infrastructure as Code (IaC) workflow for reproducible deployments.</li>
+        </ul>
         <div class="project-links">
-          <a href="https://bit.ly/4bUbxfC" target="_blank">Demo</a>
+          <a href="https://bit.ly/4bUbxfC" target="_blank" rel="noreferrer">
+            <i class="fas fa-external-link-alt"></i> Demo
+          </a>
         </div>
-      </div>
+      </article>
 
-      <div class="card">
+      <article class="project-card">
+        <div class="project-icon"><i class="fab fa-python"></i></div>
         <h3>Flask Student Attendance App</h3>
-        <p>Created a Flask-based attendance system, containerized with Docker, and deployed on AWS EC2.</p>
+        <p class="project-platform">AWS EC2</p>
+        <ul>
+          <li>Created a Flask-based attendance system, containerized with Docker.</li>
+          <li>Deployed on AWS EC2 with production configuration.</li>
+        </ul>
         <div class="project-links">
-          <a href="https://github.com/mazid-dev/flask-student-attendance-app.git" target="_blank">GitHub</a>
-          <a href="https://bit.ly/4s9VWgB" target="_blank">Demo</a>
+          <a href="https://github.com/mazid-dev/flask-student-attendance-app" target="_blank" rel="noreferrer">
+            <i class="fab fa-github"></i> Code
+          </a>
+          <a href="https://bit.ly/4s9VWgB" target="_blank" rel="noreferrer">
+            <i class="fas fa-external-link-alt"></i> Demo
+          </a>
+        </div>
+      </article>
+
+      <article class="project-card">
+        <div class="project-icon"><i class="fas fa-cubes"></i></div>
+        <h3>Task Manager on Kubernetes</h3>
+        <p class="project-platform">AWS EC2</p>
+        <ul>
+          <li>Built multi-node Kubernetes cluster using kubeadm and containerd on AWS EC2.</li>
+          <li>Deployed a Task Manager application with full production configuration.</li>
+        </ul>
+        <div class="project-links">
+          <a href="https://github.com/mazid-dev/task-manager-project" target="_blank" rel="noreferrer">
+            <i class="fab fa-github"></i> Code
+          </a>
+          <a href="https://bit.ly/4crPwot" target="_blank" rel="noreferrer">
+            <i class="fas fa-external-link-alt"></i> Demo
+          </a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- EDUCATION & CERTIFICATIONS -->
+  <section id="education">
+    <div class="section-header">
+      <span class="section-tag">Background</span>
+      <h2 class="section-title">Education & Certifications</h2>
+      <p class="section-subtitle">My academic background and professional certifications.</p>
+    </div>
+
+    <div class="two-col-grid">
+      <div>
+        <div class="edu-card">
+          <h3>B.Sc. in Computer Science & Engineering (CSE)</h3>
+          <p class="institute">Anwer Khan Modern University, Dhaka</p>
+          <span class="meta"><i class="fas fa-star"></i> CGPA: 3.52 / 4.00 · Completed: 2026</span>
+        </div>
+
+        <div class="edu-card">
+          <h3>Diploma in Computer Technology</h3>
+          <p class="institute">Rajshahi Polytechnic Institute</p>
+          <span class="meta"><i class="fas fa-star"></i> CGPA: 3.54 / 4.00 · Completed: 2022</span>
         </div>
       </div>
 
-      <div class="card">
-        <h3>3-Tier AWS Application</h3>
-        <p>Deployed a 3-tier application with Vite, Node.js, MongoDB, Nginx reverse proxy, PM2, and Bash automation.</p>
-        <div class="project-links">
-          <a href="https://github.com/mazid-dev/3-tier-app-master.git" target="_blank">GitHub</a>
-          <a href="https://bit.ly/47H9fxP" target="_blank">Demo</a>
+      <div>
+        <div class="cert-card">
+          <div class="cert-icon"><i class="fas fa-certificate"></i></div>
+          <div class="cert-content">
+            <h4>DevOps & Cloud Engineering</h4>
+            <p>BongDev — 2025</p>
+          </div>
         </div>
+
+        <div class="cert-card">
+          <div class="cert-icon"><i class="fas fa-network-wired"></i></div>
+          <div class="cert-content">
+            <h4>MikroTik Certified Network Associate (MTCNA)</h4>
+            <p>MikroTik — 2022</p>
+          </div>
+        </div>
+
+        <div class="cert-card">
+          <div class="cert-icon"><i class="fas fa-shield-halved"></i></div>
+          <div class="cert-content">
+            <h4>CCNA Training Completed</h4>
+            <p>Cisco — 2022</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Currently Learning + Soft Skills -->
+    <div style="margin-top: 70px;">
+      <h3 style="font-size: 22px; font-weight: 800; margin-bottom: 8px; display: flex; align-items: center; gap: 10px;">
+        <i class="fas fa-book-reader" style="color: var(--primary);"></i> Currently Learning
+      </h3>
+      <div class="pills-wrap">
+        <span class="pill"><i class="fas fa-chart-line"></i> Prometheus & Grafana</span>
+        <span class="pill"><i class="fas fa-code-branch"></i> ArgoCD & GitOps</span>
+        <span class="pill"><i class="fas fa-cubes"></i> Advanced Kubernetes</span>
+      </div>
+    </div>
+
+    <div style="margin-top: 40px;">
+      <h3 style="font-size: 22px; font-weight: 800; margin-bottom: 8px; display: flex; align-items: center; gap: 10px;">
+        <i class="fas fa-heart" style="color: var(--primary);"></i> Soft Skills
+      </h3>
+      <div class="pills-wrap">
+        <span class="pill"><i class="fas fa-lightbulb"></i> Problem Solving</span>
+        <span class="pill"><i class="fas fa-wrench"></i> Troubleshooting</span>
+        <span class="pill"><i class="fas fa-comments"></i> Communication</span>
+        <span class="pill"><i class="fas fa-users"></i> Team Collaboration</span>
+        <span class="pill"><i class="fas fa-file-alt"></i> Documentation</span>
+        <span class="pill"><i class="fas fa-bolt"></i> Quick Learner</span>
       </div>
     </div>
   </section>
 
+  <!-- CONTACT -->
   <section id="contact">
-    <div class="contact">
-      <h2 class="section-title">Let's Connect</h2>
-      <p>If you are looking for a DevOps Engineer, IT Executive, or Infrastructure Support professional, feel free to contact me.</p>
-      <p>Email: <a href="mailto:mazid.info67@gmail.com">mazid.info67@gmail.com</a></p>
-      <p>Phone: <a href="tel:01739365972">01739365972</a></p>
-      <p>GitHub: <a href="https://github.com/mazid-dev" target="_blank">github.com/mazid-dev</a></p>
-      <p>LinkedIn: <a href="https://www.linkedin.com/in/md-mazid-hossain-293561227/" target="_blank">linkedin.com/in/md-mazid-hossain-293561227</a></p>
+    <div class="contact-wrap">
+      <span class="section-tag">Get in Touch</span>
+      <h2>Let's Build Something Together</h2>
+      <p>Looking for a DevOps Engineer, IT Executive, or Infrastructure Support professional? Let's talk.</p>
+
+      <div class="contact-links">
+        <a href="mailto:mazid.info67@gmail.com" class="contact-btn">
+          <i class="fas fa-envelope"></i> mazid.info67@gmail.com
+        </a>
+        <a href="tel:+8801739365972" class="contact-btn">
+          <i class="fas fa-phone"></i> +880 1739 365972
+        </a>
+        <a href="https://github.com/mazid-dev" target="_blank" rel="noreferrer" class="contact-btn">
+          <i class="fab fa-github"></i> github.com/mazid-dev
+        </a>
+        <a href="https://www.linkedin.com/in/md-mazid-hossain-293561227/" target="_blank" rel="noreferrer" class="contact-btn">
+          <i class="fab fa-linkedin"></i> LinkedIn
+        </a>
+      </div>
     </div>
   </section>
 
   <footer>
-    <p>© 2026 Md Mazid Hossain | DevOps Portfolio</p>
+    <p>© 2026 <strong>Md Mazid Hossain</strong> · DevOps Engineer & IT Executive · Built with ❤️</p>
   </footer>
+
+  <button class="scroll-top" id="scrollTop" aria-label="Scroll to top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <script>
+    // ═══ Theme Toggle ═══
+    const themeToggle = document.getElementById('themeToggle');
+    const body = document.body;
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'light') {
+      body.classList.add('light-mode');
+      themeToggle.innerHTML = '<i class="fas fa-moon"></i>';
+    }
+    themeToggle.addEventListener('click', () => {
+      body.classList.toggle('light-mode');
+      const isLight = body.classList.contains('light-mode');
+      localStorage.setItem('theme', isLight ? 'light' : 'dark');
+      themeToggle.innerHTML = isLight ? '<i class="fas fa-moon"></i>' : '<i class="fas fa-sun"></i>';
+    });
+
+    // ═══ Mobile Menu ═══
+    const menuToggle = document.getElementById('menuToggle');
+    const navMenu = document.getElementById('navMenu');
+    menuToggle.addEventListener('click', () => {
+      navMenu.classList.toggle('open');
+      const icon = menuToggle.querySelector('i');
+      icon.className = navMenu.classList.contains('open') ? 'fas fa-times' : 'fas fa-bars';
+    });
+    document.querySelectorAll('#navMenu a').forEach(link => {
+      link.addEventListener('click', () => {
+        navMenu.classList.remove('open');
+        menuToggle.querySelector('i').className = 'fas fa-bars';
+      });
+    });
+
+    // ═══ Scroll to Top ═══
+    const scrollTop = document.getElementById('scrollTop');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 500) scrollTop.classList.add('visible');
+      else scrollTop.classList.remove('visible');
+    });
+    scrollTop.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    // ═══ Reveal on Scroll ═══
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = '1';
+          entry.target.style.transform = 'translateY(0)';
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.card, .experience-card, .project-card, .edu-card, .cert-card').forEach(el => {
+      el.style.opacity = '0';
+      el.style.transform = 'translateY(30px)';
+      el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+      observer.observe(el);
+    });
+  </script>
 
 </body>
 </html>
